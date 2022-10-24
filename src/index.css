@@ -1,13 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	img,
+	video {
+		max-width: initial;
+		height: initial;
+	}
+
+	h4 {
+		@apply text-white xs:text-sm;
+	}
+
+	h3 {
+		@apply xs:text-sm;
+	}
+
+	button {
+		@apply py-4 px-8 mb-4 text-slate-600 bg-white border-solid border-2 border-black mr-8 font-semibold rounded-3xl cursor-pointer
+		xl:mt-4 md:py-2 md:px-4 md:text-sm md:mb-2;
+	}
+
+	button.active {
+		@apply py-4 px-8 text-white border-solid border-2 border-black mr-8 font-semibold rounded-3xl cursor-pointer
+		bg-gradient-to-b from-[#494949] to-[#313131] md:py-2 md:px-4 md:text-sm md:mb-2;
+	}
+}
+
+.vegpop-content {
+	@apply absolute z-30 left-1/2 bottom-0 -translate-x-1/2 text-center text-white w-full font-semibold text-base h-[20%]
+	flex items-center justify-center;
+}
+
+.vegpop-div {
+	@apply absolute z-10 w-full h-full bg-gradient-to-b from-first to-second rounded-xl;
+}
+
+.vegpop-img {
+	@apply w-full h-full rounded-xl absolute object-cover;
+}
+
+.cuisine-sec {
+	@apply flex flex-col justify-center items-center rounded-full
+	bg-gradient-to-b from-[#494949] to-[#313131] w-24 h-24 mr-8 scale-75 cursor-pointer sm:w-20 sm:h-20;
+}
+
+.cuisine-sec.active {
+	@apply flex flex-col justify-center items-center rounded-full
+	bg-gradient-to-r from-[#f27121] to-[#e94057] w-24 h-24 mr-8 scale-75 cursor-pointer sm:w-20 sm:h-20;
+}
+
+.sign {
+	@apply text-white text-2xl xs:text-sm;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Montserrat', sans-serif;
+}
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+		'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+		sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	margin: 0% 20%;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+		monospace;
 }
