@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom';
 
 const Category = () => {
 	return (
-		<div className='flex flex-wrap justify-between m-8 xs:grid xs:grid-cols-2'>
+		<div className='flex flex-wrap justify-between m-8'>
 			<NavLink to={'/cuisine/Italian'} className='cuisine-sec'>
 				<FaPizzaSlice className='sign' />
 				<h4>Italian</h4>

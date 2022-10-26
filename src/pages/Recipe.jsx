@@ -23,42 +23,42 @@ const Recipe = () => {
 	}, [params.name]);
 
 	return (
-		<div className='flex mt-28 mb-20 xl:flex-col md:mt-16'>
+		<div className='flex mt-10 flex-col'>
 			<div>
-				<h2 className='mb-8 font-bold xs:mb-4'>{details.title}</h2>
+				<h2 className='mb-4 ml-4 font-bold '>{details.title}</h2>
 				<img
 					src={details.image}
 					alt={details.title}
-					className='rounded-3xl md:w-10/12'
+					className='rounded-3xl w-80 h-80 ml-4 xs:w-96 xs:h-96 sm:w-full sm:h-full'
 				/>
 			</div>
 
-			<div className='ml-36 xl:flex-col xl:ml-0'>
-				<button
-					className={activeTab === 'instructions' ? 'active' : ''}
-					onClick={() => setActiveTab('instructions')}
-				>
-					Instructions
-				</button>
-				<button
-					className={activeTab === 'ingredients' ? 'active' : ''}
-					onClick={() => setActiveTab('ingredients')}
-				>
-					Ingredients
-				</button>
+			<div className='ml-4 mb-4 text-sm '>
+				<div className='flex mr-4'>
+					<button
+						className={activeTab === 'instructions' ? 'active' : ''}
+						onClick={() => setActiveTab('instructions')}
+					>
+						Instructions
+					</button>
+					<button
+						className={activeTab === 'ingredients' ? 'active' : ''}
+						onClick={() => setActiveTab('ingredients')}
+					>
+						Ingredients
+					</button>
+				</div>
 
 				{activeTab === 'instructions' && (
-					<div className='xs:text-sm'>
+					<div className='mt-4'>
 						<h3 dangerouslySetInnerHTML={{ __html: details.summary }}></h3>
 						<h3 dangerouslySetInnerHTML={{ __html: details.instructions }}></h3>
 					</div>
 				)}
 				{activeTab === 'ingredients' && (
-					<ul className='mt-8 list-disc'>
+					<ul className='mt-4 list-disc'>
 						{details.extendedIngredients.map((ingredient, i) => (
-							<li key={ingredient.id + i} className='text-xl xs:text-sm'>
-								{ingredient.original}
-							</li>
+							<li key={ingredient.id + i}>{ingredient.original}</li>
 						))}
 					</ul>
 				)}

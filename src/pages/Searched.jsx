@@ -22,17 +22,15 @@ const Searched = () => {
 	}, [params.search]);
 
 	return (
-		<div className='grid grid-cols-20 gap-12'>
+		<div className='grid gap-12 grid-cols-20 mb-4'>
 			{searchedRecipes.map((item) => {
 				return (
 					<div key={item.id}>
 						<Link to={'/recipe/' + item.id}>
 							<div className='min-h-[18rem] relative'>
-								<img src={item.image} alt='' className='vegpop-img xs:w-4/5' />
-								<div className='vegpop-content xs:w-4/5 xs:-translate-x-3/4'>
-									{item.title}
-								</div>
-								<div className='vegpop-div xs:w-4/5'></div>
+								<img src={item.image} alt='' className='vegpop-img' />
+								<div className='vegpop-content'>{item.title}</div>
+								<div className='vegpop-div'></div>
 							</div>
 						</Link>
 					</div>

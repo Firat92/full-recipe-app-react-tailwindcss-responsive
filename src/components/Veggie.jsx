@@ -31,7 +31,7 @@ const Veggie = () => {
 
 	return (
 		<div className='my-16 mx-0'>
-			<h3 className='text-2xl font-bold '>Vegie Picks</h3>
+			<h3 className='text-2xl font-bold mb-4'>Vegie Picks</h3>
 			<Splide
 				options={{
 					mediaQuery: 'min',
@@ -42,7 +42,7 @@ const Veggie = () => {
 						1280: {
 							perPage: 3,
 						},
-						768: {
+						534: {
 							perPage: 2,
 						},
 					},

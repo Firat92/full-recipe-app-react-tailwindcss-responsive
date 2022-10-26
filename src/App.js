@@ -6,7 +6,7 @@ import { GiKnifeFork } from 'react-icons/gi';
 
 function App() {
 	return (
-		<div className='App'>
+		<div className='mx-2 lg:mx-auto md:mx-6 sm:mx-4 max-w-[70rem] px-2 md:px-4'>
 			<div
 				className='flex justify-start items-center
 			py-16 px-0'

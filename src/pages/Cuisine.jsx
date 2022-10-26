@@ -24,7 +24,7 @@ const Cuisine = () => {
 
 	return (
 		<motion.div
-			className='grid grid-cols-20 gap-12'
+			className='grid grid-cols-20 gap-12 mb-4'
 			animate={{ opacity: 1 }}
 			initial={{ opacity: 0 }}
 			exit={{ opacity: 0 }}
@@ -34,12 +34,12 @@ const Cuisine = () => {
 				return (
 					<div key={item.id} className=''>
 						<Link to={'/recipe/' + item.id} className='no-underline'>
-							<img
-								src={item.image}
-								alt={item.title}
-								className='w-full rounded-3xl xs:w-4/5'
-							/>
-							<h4 className='items-center p-4'>{item.title}</h4>
+							<div className='min-h-[18rem] relative'>
+								<p className='vegpop-content'>{item.title}</p>
+								<img src={item.image} alt={item.title} className='vegpop-img' />
+								<div className='vegpop-content'></div>
+								<div className='vegpop-div'></div>
+							</div>
 						</Link>
 					</div>
 				);
