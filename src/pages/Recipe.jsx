@@ -23,17 +23,17 @@ const Recipe = () => {
 	}, [params.name]);
 
 	return (
-		<div className='flex mt-10 flex-col'>
+		<div className='flex mt-10 flex-col md:flex-row md:justify-between'>
 			<div>
-				<h2 className='mb-4 ml-4 font-bold '>{details.title}</h2>
+				<h2 className='mb-4 ml-4 font-bold lg:text-xl'>{details.title}</h2>
 				<img
 					src={details.image}
 					alt={details.title}
-					className='rounded-3xl w-80 h-80 ml-4 xs:w-96 xs:h-96 sm:w-full sm:h-full'
+					className='rounded-3xl w-full h-full md:w-96 md:h-96 mb-6'
 				/>
 			</div>
 
-			<div className='ml-4 mb-4 text-sm '>
+			<div className='ml-4 mb-4 text-sm lg:text-lg'>
 				<div className='flex mr-4'>
 					<button
 						className={activeTab === 'instructions' ? 'active' : ''}
@@ -50,13 +50,13 @@ const Recipe = () => {
 				</div>
 
 				{activeTab === 'instructions' && (
-					<div className='mt-4'>
+					<div className='mt-4 md:ml-4'>
 						<h3 dangerouslySetInnerHTML={{ __html: details.summary }}></h3>
 						<h3 dangerouslySetInnerHTML={{ __html: details.instructions }}></h3>
 					</div>
 				)}
 				{activeTab === 'ingredients' && (
-					<ul className='mt-4 list-disc'>
+					<ul className='mt-4 list-disc md:ml-6'>
 						{details.extendedIngredients.map((ingredient, i) => (
 							<li key={ingredient.id + i}>{ingredient.original}</li>
 						))}

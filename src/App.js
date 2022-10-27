@@ -11,10 +11,10 @@ function App() {
 				className='flex justify-start items-center
 			py-16 px-0'
 			>
-				<GiKnifeFork className='text-2xl' />
+				<GiKnifeFork className='text-base xs:text-lg md:text-xl lg:text-3xl' />
 				<Link
 					to={'/'}
-					className='no-underline text-2xl font-normal font-sans ml-1 sm:text-base'
+					className='no-underline text-base font-normal font-sans ml-1 xs:text-lg md:text-xl lg:text-3xl'
 				>
 					deliciousss
 				</Link>
